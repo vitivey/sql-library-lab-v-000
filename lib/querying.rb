@@ -1,5 +1,47 @@
+# CREATE TABLE series (
+#   id INTEGER PRIMARY KEY,
+#   title TEXT,
+#   author_id INTEGER,
+#   subgenre_id INTEGER
+# );
+# 
+# CREATE TABLE subgenres (
+#   id INTEGER PRIMARY KEY,
+#   name TEXT
+# );
+# 
+# CREATE TABLE authors (
+#   id INTEGER PRIMARY KEY,
+#   name TEXT
+# );
+# 
+# CREATE TABLE books (
+#   id INTEGER PRIMARY KEY,
+#   title TEXT,
+#   year INTEGER,
+#   series_id INTEGER
+# );
+# 
+# CREATE TABLE characters (
+#   id INTEGER PRIMARY KEY,
+#   name TEXT,
+#   motto TEXT,
+#   species TEXT,
+#   author_id INTEGER,
+#   series_id INTEGER
+# );
+# 
+# CREATE TABLE character_books (
+#   id INTEGER PRIMARY KEY,
+#   character_id INTEGER,
+#   book_id INTEGER
+# );
+
 def select_books_titles_and_years_in_first_series_order_by_year
-  "Write your SQL query here"
+  "SELECT title, year 
+  FROM books
+  WHERE series_id=1
+  ORDER BY year"
 end
 
 def select_name_and_motto_of_char_with_longest_motto
