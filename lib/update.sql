@@ -1,1 +1,1 @@
-UPDATE characters SET species="Martian" HAVING id=COUNT(*);
+UPDATE characters SET species="Martian" WHERE id=8;
